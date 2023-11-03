@@ -852,5 +852,28 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
     0%   {bottom:0px;}
     100%  {bottom:7px;}
 }
+/*===============================
+    Additions from Julia Liou
+===============================*/
+.container-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.left-image-container {
+    margin-left: 40px; /* Adjust the margin to move it more into the center */
+}
+
+.right-image-container {
+    margin-left: 40px; /* Adjust the margin to move it more into the center */
+    margin-right: 60px;
+}
+
+.tableau-center {
+    margin-left: 250px;
+
+}
 
 /*========================Thank you=================
