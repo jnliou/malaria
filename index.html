@@ -486,45 +486,53 @@
 		<!--skills end -->
 
 		<!--dataset start -->
+
+
+
+
+		-----
 		<section id="dataset" class="dataset">
 			<div class="section-heading text-center">
 				<h2>dataset</h2>
 			</div>
 			
-		<div class="container">
-				
-				<div class="portfolio-content container-center"> <!-- Move the container-center class to the parent container -->
+
+
+			<div class="container">
+				<div class="portfolio-content">
 					<div class="isotope">
-						<div class="row">
-							<div class="col-sm-4">
+						<div class="row justify-content-center">
+	
+							<!-- First Image -->
+							<div class="col-sm-6">
 								<div class="item">
-									<div class="container-center left-image-container">
-									<img src="images/kaggle.png" alt="portfolio image" class="smaller-image" />
+									<img src="images/kaggle.png" alt="portfolio image"/>
 									<div class="isotope-overlay">
 										<a href="https://www.kaggle.com/datasets/iarunava/cell-images-for-detecting-malaria">
 											Kaggle
 										</a>
 									</div><!-- /.isotope-overlay -->
 								</div><!-- /.item -->
-							</div>
-							</div>
-							<div class="container-center right-image-container">
-							<div class="col-sm-4">
+							</div><!-- /.col-sm-6 -->
+	
+							<!-- Second Image -->
+							<div class="col-sm-6">
 								<div class="item">
-									<img src="images/nationallibrary.png" alt="portfolio image" class="smaller-image" />
+									<img src="images/nationallibrary.png" alt="portfolio image"/>
 									<div class="isotope-overlay">
 										<a href="https://lhncbc.nlm.nih.gov/LHC-downloads/downloads.html#malaria-datasets">
 											National Library of Medicine
 										</a>
-									</div>
 									</div><!-- /.isotope-overlay -->
 								</div><!-- /.item -->
-							</div>
-						</div>
-					</div>
-				</div>
+							</div><!-- /.col-sm-6 -->
+	
+						</div><!-- /.row -->
+					</div><!--/.isotope-->
+				</div><!--/.portfolio-content-->
 			</div><!--/.container-->
-		
+		</div><!--/.portfolio-details-->
+
 
 		</section><!--/.dataset-->
 		<!--dataset end -->
@@ -533,7 +541,7 @@
 		<section id="eda" class="eda">
 			<div class="profiles-details">
 				<div class="section-heading text-center">
-					<h2>Exploratory Data Analysis</h2>
+					<h2>Exploratory Data Analysis (EDA)</h2>
 				</div>
 				<div class="section-heading text-center">
 					<h3><strong>Image Preprocessing</strong></h3>
@@ -633,10 +641,10 @@
 						<li><strong>Average RGB Color: </strong> Compares RGB color distribution, using histograms and T-tests to find distinctions.</li>
 						<li> <strong>Principal Component Analysis (PCA):</strong> A dimensionality reduction technique used in image analysis to extract and represent the most important features or components of an image.</li>
 					</ul>
-					<p4>The EDA relies on statistical analysis to differentiate cell characteristics. Explore the Tableau Dashboard for visual insights: <a href="Tableau Dashboard Link">Tableau Dashboard</a>.</p>
+					<p4>The EDA relies on statistical analysis to differentiate cell characteristics. We utilized EDA to generate numeric values based on the cell images, to put thorugh our machine learning models. Explore the Tableau Dashboard for visual insights: <a href="Tableau Dashboard Link">Tableau Dashboard</a>.</p>
 				</div>
 				<div class="tableau-center">
-				<div class='tableauPlaceholder' id='viz1699042217541' style='position: relative'><noscript><a href='#'><img alt='Exploratory Data Analysis on Malaria Cell Images ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;ED&#47;EDAonCellImagesofMalaria-Tableau&#47;ExploratoryDataAnalysisonMalariaCellImages&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='EDAonCellImagesofMalaria-Tableau&#47;ExploratoryDataAnalysisonMalariaCellImages' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;ED&#47;EDAonCellImagesofMalaria-Tableau&#47;ExploratoryDataAnalysisonMalariaCellImages&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1699042217541');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='1016px';vizElement.style.height='991px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+				<div class='tableauPlaceholder' id='viz1699042217541' style='position: relative'><noscript><a href='https://public.tableau.com/app/profile/julia.liou6123/viz/EDAonCellImagesofMalaria-Tableau/ExploratoryDataAnalysisonMalariaCellImages'><img alt='Exploratory Data Analysis on Malaria Cell Images ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;ED&#47;EDAonCellImagesofMalaria-Tableau&#47;ExploratoryDataAnalysisonMalariaCellImages&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='EDAonCellImagesofMalaria-Tableau&#47;ExploratoryDataAnalysisonMalariaCellImages' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;ED&#47;EDAonCellImagesofMalaria-Tableau&#47;ExploratoryDataAnalysisonMalariaCellImages&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1699042217541');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='1016px';vizElement.style.height='991px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
 			</div>
 		</div>
 		</section><!--/.profiles-->
@@ -856,7 +864,7 @@
 			<div class="container">
 				<div class="hm-footer-copyright text-center">
 					<p>
-						&copy; copyright yourname. design and developed by <a href="https://www.themesine.com/">themesine</a>
+						&copy; copyright Julia Liou. design and developed by <a href="https://www.themesine.com/">themesine</a>
 					</p><!--/p-->
 				</div><!--/.text-center-->
 			</div><!--/.container-->
