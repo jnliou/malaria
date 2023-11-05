@@ -879,9 +879,10 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
 
 
 .tableau-center {
-    margin-left: 250px;
-
-}
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
 /* Dataset CSS */
 
