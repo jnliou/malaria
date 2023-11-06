@@ -715,8 +715,13 @@
 								  <div id="randomForestModal" class="modal">
 									<div class="modal-content">
 									  <span class="close">&times;</span>
-									  <h2>Random Forest Model</h2>
-									  <p>The EDA data was analyzed by a Random Forest model to predict if a cell was infected or not. The Random Forest model was tuned with hyperparameters, and the important features were identified.</p>
+									  <div class="section-heading text-center"><h2>Random Forest Model</h2></div>
+									  <div class="section-heading text-center"><a href="https://github.com/jnliou/project4/blob/main/Various_models.ipynb">
+										Find the Code for Random Forest Model Here</a></div>
+									  <div class="centered-image2">
+										<img src="images/randomforest.PNG" alt="Random Forest"/>
+									</div>
+									<br><div class="section-heading text-center"> <p>The EDA data was analyzed by a Random Forest model to predict if a cell was infected or not. The Random Forest model was tuned with hyperparameters, and the important features were identified.</p> </div>
 									  <h3>Testing Data:</h3>
 									  <p>The testing dataset of 750 images that were not seen by the model was used to test the dataset. The model was used to predict infected and uninfected cells.</p>
 									  <h3>Results:</h3>
@@ -739,7 +744,13 @@
 									<!-- Modal content -->
 									<div class="modal-content3">
 									<span class="close3">&times;</span>
-									  <h2>Xception Model</h2>
+									<div class="section-heading text-center"><h2> Xception Model </h2></div>
+									<div class="section-heading text-center"><a href="https://github.com/jnliou/project4/blob/main/xception.ipynb">
+											Find the Code for Xception Model Here</a> </div>
+										
+											<div class="centered-image2">
+												<img src="images/xception.PNG" alt="Xception"/>
+											</div>
 									  <h3>Model Architecture:</h3>
 									  <p>Input Layer: Accepts images with dimensions (25, 25, 3) - Base Model: Xception with pre-trained weights - Input Layer: Accepts images with variable dimensions - Convolutional and Separable Convolutional Layers - Batch Normalization Layers - Activation Layers - Max-Pooling Layers - Global Average Pooling Layer - Two Dense (Fully Connected) Layers</p>
 									  <ol><li>Output Layer: Dense layer with 1 neuron and sigmoid activation</li><li>Freeze some layers in the base model to prevent them from being trained.</li></ol>
@@ -754,12 +765,12 @@
 										<li>Total parameters: 22,960,681 (87.59 MB)</li>
 										<li>Trainable parameters: 2,099,201 (8.01 MB)</li>
 										<li>Non-trainable parameters: 20,861,480 (79.58 MB)</li>
-										<li>The graphs in xception.ipynb depict that the data was overfitting at certain points but the validation set performed better than the training data consistently.</li>
+										<li>The graphs in <strong>xception.ipynb</strong> depict that the data was overfitting at certain points but the validation set performed better than the training data consistently.</li>
 																		</ol>
 									</div>
 								  </div>
 							   <!-- External JS file -->
-							   <script src="assets/js/xception.js"></script>
+							   <script src="assets/js/ml-model.js"></script>
 							</div><!-- /.isotope -->
 						</div><!-- /.portfolio-content -->
 					</div><!-- /.container -->
