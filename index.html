@@ -686,35 +686,92 @@
 		
 		<!--profiles end -->
 	</section><!--/.profiles-->
-		<!--portfolio start -->
+		<!--ML Model start -->
 		<section id="mlmodel" class="mlmodel">
 			<div class="portfolio-details">
 				<div class="section-heading text-center">
 					<h2>Machine Learning Models</h2>
 				</div>
-				
-				<section class="portfolioml">
-					<div class="containerml">
-						<div class="portfolio-content">
-							<div class="isotope">
-								<div class="item">
-									<img src="images/CNN.PNG" alt="CNN"/>
-									<div class="isotope-overlayml">
-										<a href="#">Convolutional Neural Network (CNN)</a>
-									</div><!-- /.isotope-overlay -->
-								</div><!-- /.item -->
-				
+
+				<div class = "containerml">
+				<!--CNN Model -->
+							<div class="item">
+								<img src="images/CNN.PNG" alt="CNN" id="myImg"/>
+								<div class="isotope-overlayml">
+									<a href="#" id="myBtn">Convolutional Neural Network (CNN)</a>
+								</div>
+								<!-- The Modal -->
+								<div id="myModal" class="modal">
+									<!-- Modal content -->
+									<div class="modal-content">
+										<span class="close">&times;</span>
+										<div class="section-heading text-center"><h2>Convolutional Neural Network (CNN)</h2></div>
+										<div class="section-heading text-center"><a href="https://github.com/jnliou/project4/blob/main/optimized_MLmodel.ipynb">
+											Find the Code for CNN Model Here</a></div>
+										  <div class="centered-image2">
+											<img src="images/CNN.PNG" alt="CNN"/>
+										</div>
+										<div class="section-heading text-center"></div><p>The CNN model was designed for the classification of cell images into two categories: uninfected (0) and infected (1). It's aimed at assisting in the automated detection of infected cells, a task of significance in the detection of Malaria. <ul>
+											<li><strong>Training Dataset:</strong>
+												<ol>
+													<li>Dataset Size: 1750 cell images.</li>
+													<li>Features: Each row in the dataset represents an image, with each pixel of the image treated as a feature.</li>
+													<li>Target Variable: The "Target" column indicates the class label, where 0 represents uninfected cells, and 1 represents infected cells.</li>
+												</ol>
+											</li>
+									
+											<li><strong>Data Preprocessing:</strong>
+												<ol>
+													<li>Image Resizing: All images were resized to a consistent size to ensure uniform input dimensions for the CNN.</li>
+													<li>Normalization: Pixel values were scaled to a range of [0, 1] by dividing by the maximum pixel value.</li>
+												</ol>
+											</li>
+									
+											<li><strong>Model Architecture:</strong>
+												<ol>
+													<li>Input Layer: Accepts images with dimensions (32, 25, 25, 3)</li>
+													<li>Convolutional Layers: Three convolutional layers with varying numbers of filters and filter sizes.</li>
+													<li>Max-Pooling Layers: Max-pooling layers to reduce spatial dimensions after each convolutional layer.</li>
+													<li>Flatten Layer: Flattens the output into a 1D vector of length 16.</li>
+													<li>Dense Layers: Two dense (fully connected) layers.</li>
+													<li>Dropout Layer: A dropout layer with a dropout rate of 0.5 to prevent overfitting.</li>
+												</ol>
+											</li>
+									
+											<li><strong>Model Training:</strong>
+												<ol>
+													<li>Loss Function: Binary cross-entropy.</li>
+													<li>Optimizer: Adam</li>
+													<li>Batch Size: 32</li>
+													<li>Epochs: 50</li>
+													<li>Validation Split: 20% of the training data was used for validation.</li>
+												</ol>
+											</li>
+									
+											<li><strong>Model Evaluation:</strong>
+												<ol>
+													<li>Accuracy: Measures the overall correctness of predictions. For this model, the accuracy was 94%.</li>
+												</ol>
+											</li>
+										</ol>
+									</p></div>
+										
+									</div>
+								</div>
+							</div>
+							
+							<div class = "containerml">
 								<div class="item">
 									<img src="images/randomforest.PNG" alt="Random Forest"/>
 									<div class="isotope-overlayml">
 									  <!-- Updated href to trigger JavaScript function -->
-									  <a href="#randomForestModal" class="modal-trigger">Random Forest</a>
+									  <a href="#randomForestModal" class="modal-trigger2">Random Forest</a>
 									</div>
 								  </div>
 								  <!-- The Modal -->
-								  <div id="randomForestModal" class="modal">
-									<div class="modal-content">
-									  <span class="close">&times;</span>
+								  <div id="randomForestModal" class="modal2">
+									<div class="modal-content2">
+									  <span class="close2">&times;</span>
 									  <div class="section-heading text-center"><h2>Random Forest Model</h2></div>
 									  <div class="section-heading text-center"><a href="https://github.com/jnliou/project4/blob/main/Various_models.ipynb">
 										Find the Code for Random Forest Model Here</a></div>
@@ -728,10 +785,12 @@
 									  <p>The Random forest with hyperparameter tuning gave an accuracy of 89%.</p>
 									</div>
 								  </div>
+								</div>
 								   <!-- External JS file -->
  								 <script src="assets/js/ml-model.js"></script>
 				
 								<!-- Trigger/Open The Modal -->
+								<div class = "containerml">
 								<div class="item">
 									<img src="images/xception.PNG" alt="Xception"/>
 									<div class="isotope-overlayml">
@@ -757,8 +816,8 @@
 									  <h3>Model Training:</h3>
 									  <ol><li>Loss Function: Binary cross-entropy.</li><li>Optimizer: Adam.</li><li>Batch Size: 32</li><li>Epochs: 20 for base model and 10 for top model</li><li>Validation Split: 20% of the training data was used for validation during training to monitor model performance.</li></ol>
 									  <h3>Model Evaluation:</h3>
-									  <ol><li>The model's performance was evaluated using common binary classification metrics, including:</li><li>Accuracy: For base model was 78-80% while for top model was 77%.</li></ol>
-									  <ol><li>This is a pre-trained model on the popular image dataset called <strong>imagenet</strong>. We built our base model using the pre-trained model and then added a layer of our own testing and training dataset to see how it performs. We got an accuracy of 79% over 20 epochs.</li><li>Model was fine-tuned by adding creating <strong>top_model</strong> on top of the <strong>base_model</strong> by feeding the output from the base model to the top model. It was interesting to notice that the accuracy did not change much but the loss had a significant difference.
+									  <ol><li>The model's performance was evaluated using common binary classification metrics, including:</li><li>Accuracy: For base model was 78-80% while for top model was 77%.</li>
+									  <li>This is a pre-trained model on the popular image dataset called <strong>imagenet</strong>. We built our base model using the pre-trained model and then added a layer of our own testing and training dataset to see how it performs. We got an accuracy of 79% over 20 epochs.</li><li>Model was fine-tuned by adding creating <strong>top_model</strong> on top of the <strong>base_model</strong> by feeding the output from the base model to the top model. It was interesting to notice that the accuracy did not change much but the loss had a significant difference.
 									  </li></ol>
 									  <h3>Model Summary:</h3>
 									  <ol><li>Model architecture with detailed layer information for top model.</li>
@@ -769,14 +828,15 @@
 																		</ol>
 									</div>
 								  </div>
+								  
 							   <!-- External JS file -->
 							   <script src="assets/js/ml-model.js"></script>
 							</div><!-- /.isotope -->
 						</div><!-- /.portfolio-content -->
 					</div><!-- /.container -->
 
-		</section><!--/.portfolio-->
-		<!--portfolio end -->
+		</section><!--/.ML model-->
+		<!--ML model end -->
 
 		<!--clients start -->
 		<section id="clients" class="clients">

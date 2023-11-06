@@ -967,18 +967,27 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
     margin-top: 1px; /* Reduce this value or set to 0 to decrease the space */
     /* Other styles */
 }
-  .containerml {
-    width: 100%;
-    margin: 0 auto;
-    display: flex; /* This will lay out the .item elements in a row */
-    justify-content: center; /* This will center the items in the row */
-    padding-top: 0px;
+.containerml {
+    display: flex; /* Use flexbox to layout children */
+    justify-content: center; /* Center the items horizontally */
+    align-items: center; /* Center the items vertically */
+    flex-wrap: wrap; /* Allow items to wrap as needed */
 }
 
 .itemml {
+    flex: 0 0 auto; /* Do not grow, do not shrink, and be based on its width */
     margin: 0 10px; /* Spacing between items */
-    position: relative; /* For the absolute positioning of the overlay */
+    /* Make sure the total width (width + margin) does not exceed 33% for three items in a row */
 }
+
+img {
+    max-width: 100%; /* Ensures the image is responsive */
+    height: auto; /* Maintains the aspect ratio */
+    display: block; /* Removes bottom space/margin */
+}
+
+/* Remove or override any other styles that may cause the items to not fit in a single row */
+
 
 .isotope-overlayml {
     position: absolute;
@@ -1003,14 +1012,9 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
     text-decoration: none;
 }
 
-img {
-    display: block; /* Removes bottom space/margin */
-    max-width: 100%; /* Ensures the image is responsive */
-    height: auto; /* Keeps image aspect ratio */
-}
 
-/* Style the modal */
-.modal {
+/* Style the modal random forest */
+.modal2 {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
     z-index: 1; /* Sit on top */
@@ -1024,7 +1028,7 @@ img {
   }
   
   /* Modal Content */
-  .modal-content {
+  .modal-content2 {
     background-color: #fefefe;
     margin: 15% auto; /* 15% from the top and centered */
     padding: 20px;
@@ -1033,15 +1037,15 @@ img {
   }
   
   /* The Close Button */
-  .close {
+  .close2 {
     color: #aaa;
     float: right;
     font-size: 28px;
     font-weight: bold;
   }
   
-  .close:hover,
-  .close:focus {
+  .close:hover2,
+  .close:focus2 {
     color: #888ea5;
     text-decoration: none;
     cursor: pointer;
@@ -1095,6 +1099,46 @@ img {
     margin-right: auto;
     max-width: 100%;
     height: auto;
+  }
+
+   /* CNN */
+  /* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    padding-top: 60px;
+  }
+  
+  /* Modal Content/Box */
+  .modal-content {
+    background-color: #fefefe;
+    margin: 5% auto; /* 5% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+  }
+  
+  /* The Close Button */
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
   }
   
 
