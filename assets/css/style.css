@@ -937,10 +937,152 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
 }
 
 /* Media Query if you want to handle smaller screens and ensure images stack on smaller devices */
-@media (max-width: 768px) {
-    .col-sm-6 {
-        flex: 0 0 100%;
-        max-width: 100%;
-    }
+
+  /* CSS for EDA*/
+  .eda-point {
+    cursor: pointer;
+    margin: 10px 0;
+    color: #b636ff;
+  }
+
+  .eda-description {
+    display: none;
+    margin-left: 20px;
+    font-size: 0.9em;
+  }
+
+  .container {
+    width: 80%;
+    margin: 0 auto;
 }
+
+  /*ML Model*/
+
+  .section-headingml {
+    margin-bottom: 1px; /* Reduce this value to reduce the space below the heading */
+    text-align: center;
+}
+
+.portfolioml {
+    margin-top: 1px; /* Reduce this value or set to 0 to decrease the space */
+    /* Other styles */
+}
+  .containerml {
+    width: 100%;
+    margin: 0 auto;
+    display: flex; /* This will lay out the .item elements in a row */
+    justify-content: center; /* This will center the items in the row */
+    padding-top: 0px;
+}
+
+.itemml {
+    margin: 0 10px; /* Spacing between items */
+    position: relative; /* For the absolute positioning of the overlay */
+}
+
+.isotope-overlayml {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex; /* To center the link horizontally and vertically */
+    align-items: center; /* Aligns vertically */
+    justify-content: center; /* Aligns horizontally */
+    opacity: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    transition: opacity 0.25s;
+}
+
+.item:hover .isotope-overlayml {
+    opacity: 1;
+}
+
+.isotope-overlayml a {
+    color: white;
+    text-decoration: none;
+}
+
+img {
+    display: block; /* Removes bottom space/margin */
+    max-width: 100%; /* Ensures the image is responsive */
+    height: auto; /* Keeps image aspect ratio */
+}
+
+/* Style the modal */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content */
+  .modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+  }
+  
+  /* The Close Button */
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #888ea5;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  /* Xception */
+  .modal3 {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content */
+  .modal-content3 {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+  }
+  
+  /* The Close Button */
+  .close3 {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close3:hover,
+  .close3:focus {
+    color: #888ea5;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
 /*========================Thank you=================

@@ -44,6 +44,10 @@
 
 		 <!--w3 .css-->
 		<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+ 		<!--ML model pop up-->
+		<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
         
         <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -52,6 +56,18 @@
 			<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
 			<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
         <![endif]-->
+
+		<script>
+			// Function to toggle the visibility of the description
+			function toggleDescription(id) {
+			  var x = document.getElementById(id);
+			  if (x.style.display === "none") {
+				x.style.display = "block";
+			  } else {
+				x.style.display = "none";
+			  }
+			}
+		  </script>
 
     </head>
 	
@@ -132,7 +148,7 @@
 									<div class="section-heading text-center">Julia Liou | Project Manager | Data Analyst & <br>Data Engineer</div>
 								</h3>
 								<p>
-									Julia Liou is a versatile professional with a strong background in healthcare and a burgeoning expertise in data analytics. With her foundation in nursing and biology, she excels in collaboration, communication, and empathy, while also mastering data analytics tools like Python, SQL, and Tableau. Julia's career spans from delivering patient-centric care to actively contributing to vital research, and her ability to bridge the gap between healthcare and technology makes her a standout talent in both fields.
+									Julia is a versatile professional with a strong background in healthcare and a burgeoning expertise in data analytics. With her foundation in nursing and biology, she excels in collaboration, communication, and empathy, while also mastering data analytics tools like Python, SQL, and Tableau. Julia's career spans from delivering patient-centric care to actively contributing to vital research, and her ability to bridge the gap between healthcare and technology makes her a standout talent in both fields.
 								</p>
 								<div class="row">
 									<div class="col-sm-4">
@@ -184,17 +200,17 @@
 					<div class="row">
 						<div class="col-sm-6">
 							<div class="single-about-txt">
-								<h3>
+								<div class="section-heading text-center"><h3>
 									Manpreet Sharma | Data Scientist
-								</h3>
+								</h3></div>
 								<p>
-									Manpreet Sharma | Data Scientist Manpreet Sharma | Data ScientistManpreet Sharma | Data Scientist
+									Manpreet is renowned for her exceptional skills in enhancing operational efficiency and refining reporting structures. With a robust background in logistics management and a keen eye for process improvement, she has consistently streamlined complex workflows and optimized supply chain operations. Her expertise extends beyond logistics, demonstrating a profound understanding of data analytics and its pivotal role in refining logistical processes. Leveraging tools such as Excel, Python, and Power BI, Manpreet has transformed raw data into actionable insights, enabling data-driven decisions that have significantly impacted the organizations she's worked with. Her distinct forte lies in her remarkable capacity to harmonize the realms of logistics and data analytics, empowering her to forge pioneering solutions.
 								</p>
 								<div class="row">
 									<div class="col-sm-4">
 										<div class="single-about-add-info">
 											<h3>email</h3>
-											<p>julialiou@alumni.ubc.ca</p>
+											<p>mehpree88@icloud.com</p>
 										</div>
 									</div>
 									
@@ -234,9 +250,9 @@
 					<div class="row">
 						<div class="col-sm-6">
 							<div class="single-about-txt">
-								<h3>
+								<div class="section-heading text-center"><h3>
 									Srinivas Jayaram | Machine Learning Engineer
-								</h3>
+								</h3></div>
 								<p>
 									Manpreet Sharma | Data Scientist Manpreet Sharma | Data ScientistManpreet Sharma | Data Scientist
 								</p>
@@ -285,9 +301,9 @@
 					<div class="row">
 						<div class="col-sm-6">
 							<div class="single-about-txt">
-								<h3>
+								<div class="section-heading text-center"><h3>
 									Kevin Wan | Software Developer | Web Developer
-								</h3>
+								</h3></div>
 								<p>
 									Manpreet Sharma | Data Scientist Manpreet Sharma | Data ScientistManpreet Sharma | Data Scientist
 								</p>
@@ -383,8 +399,8 @@
 									<div class="single-profile">
 										<div class="profile-txt">
 											<a href=""></a>
-											<div class="profile-icon-name">Data Cleaning + EDA Creation</div>
-										</div>
+											<div class="section-heading text-center"><div class="profile-icon-name">Data Cleaning + EDA Creation</div>
+										</div></div>
 										<div class="single-profile-overlay">
 											<div class="profile-txt">
 												<a href=""></a>
@@ -637,86 +653,116 @@
 					<h3><strong>EDA</strong></h3>
 					
 					<p4>The Exploratory Data Analysis (EDA) on cell images of malaria compares unprocessed vs. processed and uninfected vs. infected cells. It employs various techniques:</p>
-					<ul>
-						<li><strong>Blob Detection: </strong> Measures mean and max blob sizes for both cell types, assessing statistical differences using histograms and T-tests.</li>
-						<li><strong>Edge Detection: </strong> Visualizes edge structure differences between cell types.</li>
-						<li><strong>Edge Density: </strong>Compares edge density, using histograms and T-tests for analysis.</li>
-						<li><strong>Average RGB Color: </strong> Compares RGB color distribution, using histograms and T-tests to find distinctions.</li>
-						<li> <strong>Principal Component Analysis (PCA):</strong> A dimensionality reduction technique used in image analysis to extract and represent the most important features or components of an image.</li>
-					</ul>
-					<p4>The EDA relies on statistical analysis to differentiate cell characteristics. We utilized EDA to generate numeric values based on the cell images, to put through our machine learning models. Explore the Tableau Dashboard for visual insights: <a href="Tableau Dashboard Link">Tableau Dashboard</a>.</p>
-				</div>
+											
+			  <div class="section-heading text-center">
+					
+							
+							<ul>
+							  <li class="eda-point" onclick="toggleDescription('blob-detection')">Blob Detection</li>
+							  <p id="blob-detection" class="eda-description">Measures mean and max blob sizes for both cell types, assessing statistical differences using histograms and T-tests.</p>
+							  
+							  <li class="eda-point" onclick="toggleDescription('edge-detection')">Edge Detection</li>
+							  <p id="edge-detection" class="eda-description">Visualizes edge structure differences between cell types.</p>
+							  
+							  <li class="eda-point" onclick="toggleDescription('edge-density')">Edge Density</li>
+							  <p id="edge-density" class="eda-description">Compares edge density, using histograms and T-tests for analysis.</p>
+							  
+							  <li class="eda-point" onclick="toggleDescription('average-rgb')">Average RGB Color</li>
+							  <p id="average-rgb" class="eda-description">Compares RGB color distribution, using histograms and T-tests to find distinctions.</p>
+							  
+							  <li class="eda-point" onclick="toggleDescription('pca')">Principal Component Analysis (PCA)</li>
+							  <p id="pca" class="eda-description">A dimensionality reduction technique used in image analysis to extract and represent the most important features or components of an image.</p>
+							</ul>
+							
+						  </div>
+
+				<div class="section-heading text-center">The EDA relies on statistical analysis to differentiate cell characteristics. We utilized EDA to generate numeric values based on the cell images, to put through our machine learning models. Explore the Tableau Dashboard for visual insights: <a href="https://www.kaggle.com/datasets/iarunava/cell-images-for-detecting-malaria">
+					Tableau Dashboard
+				</a>.</div>
 				<div class="tableau-center">
 				<div class='tableauPlaceholder' id='viz1699042217541' style='position: relative'><noscript><a href='https://public.tableau.com/app/profile/julia.liou6123/viz/EDAonCellImagesofMalaria-Tableau/ExploratoryDataAnalysisonMalariaCellImages'><img alt='Exploratory Data Analysis on Malaria Cell Images ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;ED&#47;EDAonCellImagesofMalaria-Tableau&#47;ExploratoryDataAnalysisonMalariaCellImages&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='EDAonCellImagesofMalaria-Tableau&#47;ExploratoryDataAnalysisonMalariaCellImages' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;ED&#47;EDAonCellImagesofMalaria-Tableau&#47;ExploratoryDataAnalysisonMalariaCellImages&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1699042217541');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='1016px';vizElement.style.height='991px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
 			</div>
 		</div>
-		</section><!--/.profiles-->
+		
 		<!--profiles end -->
-
+	</section><!--/.profiles-->
 		<!--portfolio start -->
-		<section id="portfolio" class="portfolio">
+		<section id="mlmodel" class="mlmodel">
 			<div class="portfolio-details">
 				<div class="section-heading text-center">
-					<h2>portfolio</h2>
+					<h2>Machine Learning Models</h2>
 				</div>
-				<div class="container">
-					<div class="portfolio-content">
-						<div class="isotope">
-							<div class="row">
+				
+				<section class="portfolioml">
+					<div class="containerml">
+						<div class="portfolio-content">
+							<div class="isotope">
+								<div class="item">
+									<img src="images/CNN.PNG" alt="CNN"/>
+									<div class="isotope-overlayml">
+										<a href="#">Convolutional Neural Network (CNN)</a>
+									</div><!-- /.isotope-overlay -->
+								</div><!-- /.item -->
+				
+								<div class="item">
+									<img src="images/randomforest.PNG" alt="Random Forest"/>
+									<div class="isotope-overlayml">
+									  <!-- Updated href to trigger JavaScript function -->
+									  <a href="#randomForestModal" class="modal-trigger">Random Forest</a>
+									</div>
+								  </div>
+								  <!-- The Modal -->
+								  <div id="randomForestModal" class="modal">
+									<div class="modal-content">
+									  <span class="close">&times;</span>
+									  <h2>Random Forest Model</h2>
+									  <p>The EDA data was analyzed by a Random Forest model to predict if a cell was infected or not. The Random Forest model was tuned with hyperparameters, and the important features were identified.</p>
+									  <h3>Testing Data:</h3>
+									  <p>The testing dataset of 750 images that were not seen by the model was used to test the dataset. The model was used to predict infected and uninfected cells.</p>
+									  <h3>Results:</h3>
+									  <p>The Random forest with hyperparameter tuning gave an accuracy of 89%.</p>
+									</div>
+								  </div>
+								   <!-- External JS file -->
+ 								 <script src="assets/js/ml-model.js"></script>
+				
+								<!-- Trigger/Open The Modal -->
+								<div class="item">
+									<img src="images/xception.PNG" alt="Xception"/>
+									<div class="isotope-overlayml">
+										<a href="#xceptionModal" class="modal-trigger3">Xception</a>
+									</div>
+								</div>
 
-								<div class="col-sm-4">
-									<div class="item">
-										<img src="assets/images/portfolio/p1.jpg" alt="portfolio image"/>
-										<div class="isotope-overlay">
-											<a href="#">
-												ui/ux design
-											</a>
-										</div><!-- /.isotope-overlay -->
-									</div><!-- /.item -->
-									<div class="item">
-										<img src="assets/images/portfolio/p2.jpg" alt="portfolio image"/>
-										<div class="isotope-overlay">
-											<a href="#">
-												ui/ux design
-											</a>
-										</div><!-- /.isotope-overlay -->
-									</div><!-- /.item -->
-								</div><!-- /.col -->
-
-								<div class="col-sm-4">
-									<div class="item">
-										<img src="assets/images/portfolio/p3.jpg" alt="portfolio image"/>
-										<div class="isotope-overlay">
-											<a href="#">
-												web design
-											</a>
-										</div><!-- /.isotope-overlay -->
-									</div><!-- /.item -->
-								</div><!-- /.col -->
-
-								<div class="col-sm-4">
-									<div class="item">
-										<img src="assets/images/portfolio/p4.jpg" alt="portfolio image"/>
-										<div class="isotope-overlay">
-											<a href="#">
-												web development
-											</a>
-										</div><!-- /.isotope-overlay -->
-									</div><!-- /.item -->
-									<div class="item">
-										<img src="assets/images/portfolio/p5.jpg" alt="portfolio image"/>
-										<div class="isotope-overlay">
-											<a href="#">
-												web development
-											</a>
-										</div><!-- /.isotope-overlay -->
-									</div><!-- /.item -->
-								</div><!-- /.col -->
-							</div><!-- /.row -->
-						</div><!--/.isotope-->
-					</div><!--/.gallery-content-->
-				</div><!--/.container-->
-			</div><!--/.portfolio-details-->
+								<!-- The Modal -->
+								<div id="xceptionModal" class="modal3">
+									<!-- Modal content -->
+									<div class="modal-content3">
+									<span class="close3">&times;</span>
+									  <h2>Xception Model</h2>
+									  <h3>Model Architecture:</h3>
+									  <p>Input Layer: Accepts images with dimensions (25, 25, 3) - Base Model: Xception with pre-trained weights - Input Layer: Accepts images with variable dimensions - Convolutional and Separable Convolutional Layers - Batch Normalization Layers - Activation Layers - Max-Pooling Layers - Global Average Pooling Layer - Two Dense (Fully Connected) Layers</p>
+									  <ol><li>Output Layer: Dense layer with 1 neuron and sigmoid activation</li><li>Freeze some layers in the base model to prevent them from being trained.</li></ol>
+									  <h3>Model Training:</h3>
+									  <ol><li>Loss Function: Binary cross-entropy.</li><li>Optimizer: Adam.</li><li>Batch Size: 32</li><li>Epochs: 20 for base model and 10 for top model</li><li>Validation Split: 20% of the training data was used for validation during training to monitor model performance.</li></ol>
+									  <h3>Model Evaluation:</h3>
+									  <ol><li>The model's performance was evaluated using common binary classification metrics, including:</li><li>Accuracy: For base model was 78-80% while for top model was 77%.</li></ol>
+									  <ol><li>This is a pre-trained model on the popular image dataset called <strong>imagenet</strong>. We built our base model using the pre-trained model and then added a layer of our own testing and training dataset to see how it performs. We got an accuracy of 79% over 20 epochs.</li><li>Model was fine-tuned by adding creating <strong>top_model</strong> on top of the <strong>base_model</strong> by feeding the output from the base model to the top model. It was interesting to notice that the accuracy did not change much but the loss had a significant difference.
+									  </li></ol>
+									  <h3>Model Summary:</h3>
+									  <ol><li>Model architecture with detailed layer information for top model.</li>
+										<li>Total parameters: 22,960,681 (87.59 MB)</li>
+										<li>Trainable parameters: 2,099,201 (8.01 MB)</li>
+										<li>Non-trainable parameters: 20,861,480 (79.58 MB)</li>
+										<li>The graphs in xception.ipynb depict that the data was overfitting at certain points but the validation set performed better than the training data consistently.</li>
+																		</ol>
+									</div>
+								  </div>
+							   <!-- External JS file -->
+							   <script src="assets/js/xception.js"></script>
+							</div><!-- /.isotope -->
+						</div><!-- /.portfolio-content -->
+					</div><!-- /.container -->
 
 		</section><!--/.portfolio-->
 		<!--portfolio end -->
@@ -726,6 +772,8 @@
 			<div class="section-heading text-center">
 				<h2>clients</h2>
 			</div>
+
+		
 			<div class="clients-area">
 				<div class="container">
 					<div class="owl-carousel owl-theme" id="client">
