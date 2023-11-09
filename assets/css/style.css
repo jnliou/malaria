@@ -898,7 +898,7 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
     width: 100%; /* This makes the image responsive to the container's width */
     height: auto; /* This ensures the image's aspect ratio is maintained */
     max-width: 300px; /* Adjust this value to the size you want */
-    max-height: 170px; /* Adjust this value to match the height you desire */
+    max-height: auto; /* Adjust this value to match the height you desire */
     display: block; /* This removes any extra space beneath the image */
     margin: 0 auto; /* This centers the image in the container */
 }
@@ -1092,6 +1092,17 @@ img {
   .centered-image2 {
     text-align: center; /* Centers the inline-level content */
   }
+
+  .centered-image3 {
+    text-align: center; /* Centers the inline-level content */
+    width: 100%;
+    height: auto;
+    max-width: 300px;
+    max-height: 370px;
+    display: block;
+    margin: 0 auto;
+}
+  
   
   img {
     display: block; /* This makes the image a block-level element, allowing text-align to center it */

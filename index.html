@@ -108,10 +108,8 @@
 			                    <li class="smooth-menu"><a href="#dataset">dataset</a></li>
 			                    <li class="smooth-menu"><a href="#eda">eda</a></li>
 			                    <li class="smooth-menu"><a href="#mlmodel">mlmodel</a></li>
-			                    <li class="smooth-menu"><a href="#portfolio">portfolio</a></li>
-			                    <li class="smooth-menu"><a href="#clients">clients</a></li>
-			                    <li class="smooth-menu"><a href="#contact">contact</a></li>
-			                </ul><!--/.nav -->
+			                    <li class="smooth-menu"><a href="#webapp">webapp</a></li>
+			                    			                </ul><!--/.nav -->
 			            </div><!-- /.navbar-collapse -->
 			        </div><!--/.container-->
 			    </nav><!--/nav-->
@@ -260,13 +258,13 @@
 									Srinivas Jayaram | Machine Learning Engineer
 								</h3></div>
 								<p>
-									Manpreet Sharma | Data Scientist Manpreet Sharma | Data ScientistManpreet Sharma | Data Scientist
+									Srinivas Jayaram is a dedicated professional with a rich background in the oil and gas industry and an academic foundation in life sciences, highlighted by his Master's degree. His expertise expands into machine learning, demonstrated through impactful work in a project focused on predicting malaria outcomes. This project reflects his ability to skillfully bridge technology with his knowledge in life sciences. Srinivas' well-rounded skill set not only makes him adept at tackling complex challenges but also positions him as a valuable team player in any data-centric or tech-oriented role. His strong communication skills, both in writing and speaking, further augment his capability to lead and collaborate effectively in diverse project environments.
 								</p>
 								<div class="row">
 									<div class="col-sm-4">
 										<div class="single-about-add-info">
 											<h3>email</h3>
-											<p>julialiou@alumni.ubc.ca</p>
+											<p>srinivasj1987@outlook.com</p>
 										</div>
 									</div>
 									
@@ -276,7 +274,7 @@
 						</div>
 						<div class="col-sm-offset-1 col-sm-5">
 							<div class="single-about-img">
-								<img src="https://ca.slack-edge.com/T04T4V2VDFC-U054TE41CBW-e58ea4815948-512" alt="profile_image">
+								<img src= "images/sri.JPG" alt="profile_image">
 								<div class="about-list-icon">
 									<ul>
 									
@@ -311,7 +309,10 @@
 									Kevin Wan | Software Developer | Web Developer
 								</h3></div>
 								<p>
-									Manpreet Sharma | Data Scientist Manpreet Sharma | Data ScientistManpreet Sharma | Data Scientist
+									Hello! I’m Kevin Wan, a dedicated person with financial background turned data enthusiast. With a rich foundation in financial and consumer behavior, I recently stepped into the world of data analytics, fueled by a passion for turning numbers into narratives. My journey in banking has honed my attention to detail, ethical standards, and problem-solving acumen – skills I now apply to data analysis with the same rigor and dedication.
+As I embrace the intricacies of data patterns and predictive analytics, I'm on the lookout for opportunities that challenge me to blend my analytical skills with my unwavering commitment to accuracy and actionable insights. Whether it’s through meticulous data storytelling or collaborative project success, I'm excited to contribute to a team that values integrity and innovation.
+Away from data analysis, I'm often absorbed in novels or video games, which kindle my creativity and zest for life. They inspire admiration for the unseen talents behind these arts, motivating me to refine my own skills.
+ Let’s connect and explore how we can turn data into decisions that drive success!
 								</p>
 								<div class="row">
 									<div class="col-sm-4">
@@ -697,6 +698,7 @@
 			<div class="portfolio-details">
 				<div class="section-heading text-center">
 					<h2>Machine Learning Models</h2>
+					<p> The following is a summary of the optimal machine learning model we utilized for this project. We had tested out several other models for the purpose of our project, but utilized this specific model for our web application. If you are interested in learning more about the other models we utilized, feel free to view our <a href="https://github.com/jnliou/project4"> Git Hub Repo</a>.</p>
 				</div>
 
 				<div class = "containerml">
@@ -714,11 +716,11 @@
 										<div class="section-heading text-center"><h2>Convolutional Neural Network (CNN)</h2></div>
 										<div class="section-heading text-center"><a href="https://github.com/jnliou/project4/blob/main/optimized_MLmodel.ipynb">
 											Find the Code for CNN Model Here</a></div>
-										  <div class="centered-image2">
+										  <div class="centered-image3">
 											<img src="images/CNN.PNG" alt="CNN"/>
 										</div>
 										<div class="section-heading text-center"></div><p>The CNN model was designed for the classification of cell images into two categories: uninfected (0) and infected (1). It's aimed at assisting in the automated detection of infected cells, a task of significance in the detection of Malaria. <ul>
-											<li><strong>Training Dataset:</strong>
+											<br><li><strong>Training Dataset:</strong>
 												<ol>
 													<li>Dataset Size: 1750 cell images.</li>
 													<li>Features: Each row in the dataset represents an image, with each pixel of the image treated as a feature.</li>
@@ -726,40 +728,48 @@
 												</ol>
 											</li>
 									
-											<li><strong>Data Preprocessing:</strong>
+											<br><li><strong>Data Preprocessing:</strong>
 												<ol>
 													<li>Image Resizing: All images were resized to a consistent size to ensure uniform input dimensions for the CNN.</li>
 													<li>Normalization: Pixel values were scaled to a range of [0, 1] by dividing by the maximum pixel value.</li>
 												</ol>
 											</li>
+
+											
 									
-											<li><strong>Model Architecture:</strong>
-												<ol>
-													<li>Input Layer: Accepts images with dimensions (32, 25, 25, 3)</li>
-													<li>Convolutional Layers: Three convolutional layers with varying numbers of filters and filter sizes.</li>
-													<li>Max-Pooling Layers: Max-pooling layers to reduce spatial dimensions after each convolutional layer.</li>
-													<li>Flatten Layer: Flattens the output into a 1D vector of length 16.</li>
-													<li>Dense Layers: Two dense (fully connected) layers.</li>
-													<li>Dropout Layer: A dropout layer with a dropout rate of 0.5 to prevent overfitting.</li>
+											<br><li><strong>Model Architecture:</strong>
+
+												<div class="centered-image3"><img src = "images/cnn-sequential.png"></div>
+
+												<br><ol>
+													<li><strong>Conv2D Layer:</strong> First layer is a 2D convolutional layer with 16 filters. Output shape: (None, 23, 23, 16), Parameters: 448.</li>
+													<li><strong>MaxPooling2D Layer:</strong> Reduces spatial dimensions to (None, 11, 11, 16). No parameters.</li>
+													<li><strong>Second Conv2D Layer:</strong> With 32 filters. Output shape: (None, 9, 9, 32), Parameters: 4,640.</li>
+													<li><strong>Second MaxPooling2D Layer:</strong> Reduces spatial dimensions to (None, 4, 4, 32). No parameters.</li>
+													<li><strong>Third Conv2D Layer:</strong> With 16 filters. Output shape: (None, 2, 2, 16), Parameters: 4,624.</li>
+													<li><strong>Third MaxPooling2D Layer:</strong> Reduces dimensions to (None, 1, 1, 16). No parameters.</li>
+													<li><strong>Flatten Layer:</strong> Flattens output to 1D array (None, 16). No parameters.</li>
+													<li><strong>Dense Layer:</strong> Fully connected layer with 256 neurons. Parameters: 4,352.</li>
+													<li><strong>Dropout Layer:</strong> Randomly sets input units to 0 at training time. Affects 256 units but adds no new parameters.</li>
+													<li><strong>Output Dense Layer:</strong> Final layer with single neuron. Parameters: 257.</li>
+													<li><strong>Total Parameters:</strong> 14,321, accounting for 55.94 KB of memory. All parameters are trainable.</li>
 												</ol>
 											</li>
 									
-											<li><strong>Model Training:</strong>
-												<ol>
-													<li>Loss Function: Binary cross-entropy.</li>
-													<li>Optimizer: Adam</li>
-													<li>Batch Size: 32</li>
-													<li>Epochs: 50</li>
-													<li>Validation Split: 20% of the training data was used for validation.</li>
+											<br><li><strong>Model Training:</strong>
+												<br><ol>
+													<li><strong>Loss Function:</strong> Binary cross-entropy.</li>
+													<li><strong>Optimizer:</strong> Adam</li>
+													<li><strong>Batch Size:</strong> 32</li>
+													<li><strong>Epochs:</strong> 50</li>
+													<li><strong>Validation Split:</strong> 20% of the training data was used for validation.</li>
 												</ol>
 											</li>
 									
-											<li><strong>Model Evaluation:</strong>
-												<ol>
-													<li>Accuracy: Measures the overall correctness of predictions. For this model, the accuracy was 94%.</li>
-												</ol>
-											</li>
-										</ol>
+											<br><li><strong>Model Evaluation:</strong>
+												The model's performance was evaluated using common binary classification metrics, including:
+												
+													<br><strong>Accuracy:</strong> Measures the overall correctness of predictions. For this model, the accuracy was <strong>94-96%</strong>.
 									</p></div>
 										
 									</div>
@@ -784,59 +794,44 @@
 									  <div class="centered-image2">
 										<img src="images/randomforest.PNG" alt="Random Forest"/>
 									</div>
-									<br><div class="section-heading text-center"> <p>The EDA data was analyzed by a Random Forest model to predict if a cell was infected or not. The Random Forest model was tuned with hyperparameters, and the important features were identified.</p> </div>
-									  <h3>Testing Data:</h3>
-									  <p>The testing dataset of 750 images that were not seen by the model was used to test the dataset. The model was used to predict infected and uninfected cells.</p>
-									  <h3>Results:</h3>
-									  <p>The Random forest with hyperparameter tuning gave an accuracy of 89%.</p>
+
+									<br><div class="centered-image2">
+										<img src="images/randomforestchart.png" alt="Random Forest"/>
 									</div>
+									<p>The Random Forest model was used to analyze the EDA data generated from analyzing edge density, Green channel, Red Channel, Blue channel, edge density, Maximum and minimum blob size.</p>
+    
+										<h2>Classification Report</h2>
+										<p><strong>Accuracy:</strong> The model correctly predicted 89% of the test data. This is a measure of all correct predictions over all predictions made.</p>
+
+										<h3>Metrics for Class 0 (Negative Class)</h3>
+										<ul>
+											<li><strong>Precision:</strong> 0.88 - When it predicts class 0, it is correct 88% of the time.</li>
+											<li><strong>Recall:</strong> 0.90 - Correctly identified 90% of all actual class 0 instances.</li>
+											<li><strong>F1-score:</strong> 0.89 - Indicates a good balance between precision and recall.</li>
+										</ul>
+
+										<h3>Metrics for Class 1 (Positive Class)</h3>
+										<ul>
+											<li><strong>Precision:</strong> 0.90 - When it predicts class 1, it is correct 90% of the time.</li>
+											<li><strong>Recall:</strong> 0.88 - Correctly identified 88% of actual class 1 instances.</li>
+											<li><strong>F1-score:</strong> 0.89 - Balanced, similar to class 0.</li>
+										</ul>
+
+										<h3>Additional Metrics</h3>
+										<ul>
+											<li><strong>Support:</strong> 750 occurrences for each class, indicating a balanced test set.</li>
+											<li><strong>Macro Average:</strong> 0.89 - Unweighted mean for precision, recall, and F1-score, indicating overall balanced performance.</li>
+											<li><strong>Weighted Average:</strong> Equal to the macro average due to balanced class support.</li>
+										</ul>
+
+										<br><p>In summary, the model shows balanced performance with similar precision, recall, and F1-scores for both classes, performing slightly better in identifying class 0 instances than class 1 instances when considering precision and recall separately.</p>
+																		</div>
 								  </div>
 								</div>
 								   <!-- External JS file -->
  								 <script src="assets/js/ml-model.js"></script>
 				
-								<!-- Trigger/Open The Modal -->
-								<div class = "containerml">
-								<div class="item">
-									<img src="images/xception.PNG" alt="Xception"/>
-									<div class="isotope-overlayml">
-										<a href="#xceptionModal" class="modal-trigger3">Xception</a>
-									</div>
-								</div>
-
-								<!-- The Modal -->
-								<div id="xceptionModal" class="modal3">
-									<!-- Modal content -->
-									<div class="modal-content3">
-									<span class="close3">&times;</span>
-									<div class="section-heading text-center"><h2> Xception Model </h2></div>
-									<div class="section-heading text-center"><a href="https://github.com/jnliou/project4/blob/main/xception.ipynb">
-											Find the Code for Xception Model Here</a> </div>
-										
-											<div class="centered-image2">
-												<img src="images/xception.PNG" alt="Xception"/>
-											</div>
-									  <h3>Model Architecture:</h3>
-									  <p>Input Layer: Accepts images with dimensions (25, 25, 3) - Base Model: Xception with pre-trained weights - Input Layer: Accepts images with variable dimensions - Convolutional and Separable Convolutional Layers - Batch Normalization Layers - Activation Layers - Max-Pooling Layers - Global Average Pooling Layer - Two Dense (Fully Connected) Layers</p>
-									  <ol><li>Output Layer: Dense layer with 1 neuron and sigmoid activation</li><li>Freeze some layers in the base model to prevent them from being trained.</li></ol>
-									  <h3>Model Training:</h3>
-									  <ol><li>Loss Function: Binary cross-entropy.</li><li>Optimizer: Adam.</li><li>Batch Size: 32</li><li>Epochs: 20 for base model and 10 for top model</li><li>Validation Split: 20% of the training data was used for validation during training to monitor model performance.</li></ol>
-									  <h3>Model Evaluation:</h3>
-									  <ol><li>The model's performance was evaluated using common binary classification metrics, including:</li><li>Accuracy: For base model was 78-80% while for top model was 77%.</li>
-									  <li>This is a pre-trained model on the popular image dataset called <strong>imagenet</strong>. We built our base model using the pre-trained model and then added a layer of our own testing and training dataset to see how it performs. We got an accuracy of 79% over 20 epochs.</li><li>Model was fine-tuned by adding creating <strong>top_model</strong> on top of the <strong>base_model</strong> by feeding the output from the base model to the top model. It was interesting to notice that the accuracy did not change much but the loss had a significant difference.
-									  </li></ol>
-									  <h3>Model Summary:</h3>
-									  <ol><li>Model architecture with detailed layer information for top model.</li>
-										<li>Total parameters: 22,960,681 (87.59 MB)</li>
-										<li>Trainable parameters: 2,099,201 (8.01 MB)</li>
-										<li>Non-trainable parameters: 20,861,480 (79.58 MB)</li>
-										<li>The graphs in <strong>xception.ipynb</strong> depict that the data was overfitting at certain points but the validation set performed better than the training data consistently.</li>
-																		</ol>
-									</div>
-								  </div>
-								  
-							   <!-- External JS file -->
-							   <script src="assets/js/ml-model.js"></script>
+								
 							</div><!-- /.isotope -->
 						</div><!-- /.portfolio-content -->
 					</div><!-- /.container -->
@@ -845,147 +840,18 @@
 		<!--ML model end -->
 
 		<!--clients start -->
-		<section id="clients" class="clients">
+		<section id="webapp" class="webapp"> <!--webapp start -->
 			<div class="section-heading text-center">
-				<h2>clients</h2>
+				<h2>Web Application</h2>
+				<p> Feel free to watch the video on how our web application works. </p>
 			</div>
 
+			<div class="section-heading text-center">
+			<iframe width="750" height="500" src="https://www.youtube.com/embed/6YuENtL4KHg?si=DqUCFG-qzWttgXg7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
 		
-			<div class="clients-area">
-				<div class="container">
-					<div class="owl-carousel owl-theme" id="client">
-						<div class="item">
-							<a href="#">
-								<img src="assets/images/clients/c1.png" alt="brand-image" />
-							</a>
-						</div><!--/.item-->
-						<div class="item">
-							<a href="#">
-								<img src="assets/images/clients/c2.png" alt="brand-image" />
-							</a>
-						</div><!--/.item-->
-						<div class="item">
-							<a href="#">
-								<img src="assets/images/clients/c3.png" alt="brand-image" />
-							</a>
-						</div><!--/.item-->
-						<div class="item">
-							<a href="#">
-								<img src="assets/images/clients/c4.png" alt="brand-image" />
-							</a>
-						</div><!--/.item-->
-						<div class="item">
-							<a href="#">
-								<img src="assets/images/clients/c5.png" alt="brand-image" />
-							</a>
-						</div><!--/.item-->
-						<div class="item">
-							<a href="#">
-								<img src="assets/images/clients/c6.png" alt="brand-image" />
-							</a>
-						</div><!--/.item-->
-						<div class="item">
-							<a href="#">
-								<img src="assets/images/clients/c7.png" alt="brand-image" />
-							</a>
-						</div><!--/.item-->
-					</div><!--/.owl-carousel-->
-				</div><!--/.container-->
-			</div><!--/.clients-area-->
-
-		</section><!--/.clients-->
-
-		</section><!--/.clients-->
-		<!--clients end -->
-
-		<!--contact start -->
-		<section id="contact" class="contact">
-			<div class="section-heading text-center">
-				<h2>contact me</h2>
-			</div>
-			<div class="container">
-				<div class="contact-content">
-					<div class="row">
-						<div class="col-md-offset-1 col-md-5 col-sm-6">
-							<div class="single-contact-box">
-								<div class="contact-form">
-									<form>
-										<div class="row">
-											<div class="col-sm-6 col-xs-12">
-												<div class="form-group">
-												  <input type="text" class="form-control" id="name" placeholder="Name*" name="name">
-												</div><!--/.form-group-->
-											</div><!--/.col-->
-											<div class="col-sm-6 col-xs-12">
-												<div class="form-group">
-													<input type="email" class="form-control" id="email" placeholder="Email*" name="email">
-												</div><!--/.form-group-->
-											</div><!--/.col-->
-										</div><!--/.row-->
-										<div class="row">
-											<div class="col-sm-12">
-												<div class="form-group">
-													<input type="text" class="form-control" id="subject" placeholder="Subject" name="subject">
-												</div><!--/.form-group-->
-											</div><!--/.col-->
-										</div><!--/.row-->
-										<div class="row">
-											<div class="col-sm-12">
-												<div class="form-group">
-													<textarea class="form-control" rows="8" id="comment" placeholder="Message" ></textarea>
-												</div><!--/.form-group-->
-											</div><!--/.col-->
-										</div><!--/.row-->
-										<div class="row">
-											<div class="col-sm-12">
-												<div class="single-contact-btn">
-													<a class="contact-btn" href="#" role="button">submit</a>
-												</div><!--/.single-single-contact-btn-->
-											</div><!--/.col-->
-										</div><!--/.row-->
-									</form><!--/form-->
-								</div><!--/.contact-form-->
-							</div><!--/.single-contact-box-->
-						</div><!--/.col-->
-						<div class="col-md-offset-1 col-md-5 col-sm-6">
-							<div class="single-contact-box">
-								<div class="contact-adress">
-									<div class="contact-add-head">
-										<h3>browny star</h3>
-										<p>uI/uX designer</p>
-									</div>
-									<div class="contact-add-info">
-										<div class="single-contact-add-info">
-											<h3>phone</h3>
-											<p>987-123-6547</p>
-										</div>
-										<div class="single-contact-add-info">
-											<h3>email</h3>
-											<p>browny@info.com</p>
-										</div>
-										<div class="single-contact-add-info">
-											<h3>website</h3>
-											<p>www.brownsine.com</p>
-										</div>
-									</div>
-								</div><!--/.contact-adress-->
-								<div class="hm-foot-icon">
-									<ul>
-										<li><a href="#"><i class="fa fa-facebook"></i></a></li><!--/li-->
-										<li><a href="#"><i class="fa fa-dribbble"></i></a></li><!--/li-->
-										<li><a href="#"><i class="fa fa-twitter"></i></a></li><!--/li-->
-										<li><a href="#"><i class="fa fa-linkedin"></i></a></li><!--/li-->
-										<li><a href="#"><i class="fa fa-instagram"></i></a></li><!--/li-->
-									</ul><!--/ul-->
-								</div><!--/.hm-foot-icon-->
-							</div><!--/.single-contact-box-->
-						</div><!--/.col-->
-					</div><!--/.row-->
-				</div><!--/.contact-content-->
-			</div><!--/.container-->
-
-		</section><!--/.contact-->
-		<!--contact end -->
+		</section><!--/.-->
+		<!--webapp end -->
 
 		<!--footer-copyright start-->
 		<footer id="footer-copyright" class="footer-copyright">
